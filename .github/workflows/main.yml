@@ -19,7 +19,9 @@ jobs:
         id: build
         uses: geode-sdk/build-geode-mod@main
         env:
-          CXXFLAGS: -include fmod.hpp
+          CXXFLAGS: >-
+            -include
+            ${{ github.workspace }}/geode-sdk-clone/loader/include/Geode/fmod/fmod.hpp
         with:
           sdk: given
           target: iOS
