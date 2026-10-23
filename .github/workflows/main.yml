@@ -18,6 +18,8 @@ jobs:
       - name: Build Geode mod
         id: build
         uses: geode-sdk/build-geode-mod@main
+        env:
+          CXXFLAGS: -include fmod.hpp
         with:
           sdk: given
           target: iOS
